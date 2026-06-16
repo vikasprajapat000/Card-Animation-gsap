@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Outfit', sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+    background:#d8d0c7;
+}
+
+header{
+    width:100%;
+    height:80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 70px;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+
+}
+
+.logo h2{
+    font-size:22px;
+    font-weight:500;
+    line-height:18px;
+    color:#111;
+}
+
+.logo h2 span{
+    font-size:18px;
+    font-weight:300;
+}
+
+nav ul{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#222;
+    font-size:15px;
+    font-weight:300;
+}
+
+.hero_section{
+    width:100%;
+    min-height:100vh;
+
+    position:relative;
+
+    padding:120px 70px 50px 70px;
+
+    background-image:url('https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-homepage-intro-plastic-cups-for-iced-chilled-drinks-2.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(216,208,199,0.78);
+
+    z-index:1;
+}
+
+
+.hero_content{
+    position:relative;
+    z-index:2;
+}
+
+/* ================= HEADING ================= */
+
+.hero_content h1{
+    font-size:92px;
+    font-weight:300;
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+    color:#111;
+
+    margin-bottom:45px;
+}
+
+/* ================= BOX CONTAINER ================= */
+
+.box_container{
+    display:flex;
+    gap:20px;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+    width:340px;
+    height:300px;
+
+    background:rgba(255,255,255,0.18);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    backdrop-filter:blur(8px);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#111;
+
+    font-size:24px;
+    font-weight:300;
+}
+
+@media(max-width:1200px){
+
+    .hero_content h1{
+        font-size:72px;
+    }
+
+    .card{
+        width:280px;
+        height:240px;
+    }
+}
+
+@media(max-width:992px){
+
+    header{
+        flex-direction:column;
+        height:auto;
+        gap:20px;
+        padding:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero_section{
+        padding:180px 30px 40px 30px;
+    }
+
+    .hero_content h1{
+        font-size:58px;
+    }
+
+    .box_container{
+        flex-wrap:wrap;
+    }
+    .card{
+        width:100%;
+    }
+}
+@media(max-width:600px){
+
+    .hero_content h1{
+        font-size:42px;
+        letter-spacing:-1px;
+    }
+
+    .hero_section{
+        padding:190px 20px 30px 20px;
+    }
+
+    nav ul{
+        gap:18px;
+    }
+
+    nav ul li a{
+        font-size:14px;
+    }
+}

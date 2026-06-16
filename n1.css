@@ -1,0 +1,61 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+  }  
+  header{
+      height: 10%;
+      width: 100%;
+      background-color: #111111;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 30px;
+      position: fixed;
+      z-index: 99;
+
+      text-transform: uppercase;
+      transition: all ease 1.5s;
+  
+  }
+  
+  .left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:100px;
+  }
+  
+  .right{
+  height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-con…
+    gap: 30px;
+  }
+menus.addEventListener("click",()=>{
+    if(flag){
+        overlay.style.top = "0%"
+        overlay.style.transform = "rotate(5deg)"
+        menus.textContent = "CLOSE"
+        head.style.backgroundColor="#1C1C1C";
+
+        flag = 0
+    }else{
+        overlay.style.top = "-156%"
+        overlay.style.transform = "rotate(0deg)"
+        menus.textContent = "MENU"
+        head.style.backgroundColor = "#111111"
+        flag = 1
+    }
+    
+})
